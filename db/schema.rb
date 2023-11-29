@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_11_29_210955) do
+ActiveRecord::Schema[7.0].define(version: 2023_11_29_211553) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -27,7 +27,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_29_210955) do
 
   create_table "pirate_ships", force: :cascade do |t|
     t.string "name"
-    t.string "type"
+    t.string "ship_type"
     t.string "flag"
     t.integer "maximum_crew"
     t.boolean "sunk"
