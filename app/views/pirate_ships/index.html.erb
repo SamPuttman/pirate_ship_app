@@ -1,0 +1,20 @@
+<html>
+<head>
+<link href='https://fonts.googleapis.com/css?family=Pirata One' rel='stylesheet'>
+<style>
+body {
+    font-family: 'Pirata One';font-size: 24px;
+}
+</style>
+</head>
+<body>
+
+<h1>Pirate Ships</h1>
+<ul>
+  <% @pirate_ships.each do |ship| %>
+    <li><%= ship.name %></li>
+  <% end %>
+</ul>
+
+</body>
+</html>
