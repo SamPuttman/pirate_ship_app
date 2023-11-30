@@ -1,4 +1,4 @@
-<h1>Crew Members</h1>
+<h1><%= @pirate_ship.name %> Crew Members</h1>
 
 <table class="crew-members-table">
   <thead>
@@ -15,7 +15,7 @@
         <td><%= crew_member.name %></td>
         <td><%= crew_member.age %></td>
         <td><%= crew_member.role %></td>
-        <td><%= crew_member.missing_limbs ? 'Yes' : 'No' %></td>
+        <td><%= crew_member.missing_limbs %></td>
       </tr>
     <% end %>
   </tbody>

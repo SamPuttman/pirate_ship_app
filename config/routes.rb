@@ -7,5 +7,11 @@ Rails.application.routes.draw do
   get '/pirate_ships', to: 'pirate_ships#index'
   get '/pirate_ships/:id', to: 'pirate_ships#show', as: 'parent'
   get '/crew_members', to: 'crew_members#index'
+  get '/crew_members/:id', to: 'crew_members#show'
+
+  resources :pirate_ships do
+    resources :crew_members, only: [:index]
+  end
+
 
 end
