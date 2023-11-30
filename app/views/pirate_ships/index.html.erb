@@ -7,6 +7,7 @@
       <th>Ship Name</th>
       <th>Flag</th>
       <th>Maximum Crew Size</th>
+      <th>Current Crew Member Count</th>
       <th>Sunk?</th>
       <th>Created at</th>
       <th>Updated at</th>
@@ -19,6 +20,7 @@
         <td><%= pirate_ship.name %></td>
         <td><%= pirate_ship.ship_type %></td>
         <td><%= pirate_ship.maximum_crew %></td>
+        <td><%= pirate_ship.crew_members.count %></td>
         <td><%= pirate_ship.sunk %></td>
         <td><%= pirate_ship.created_at %></td>
         <td><%= pirate_ship.updated_at %></td>

@@ -6,12 +6,11 @@ Rails.application.routes.draw do
   get '/', to: 'welcome#index'
   get '/pirate_ships', to: 'pirate_ships#index'
   get '/pirate_ships/:id', to: 'pirate_ships#show', as: 'parent'
+  get '/crew_members/all', to: 'crew_members#all_index', as: 'all_crew_members'
   get '/crew_members', to: 'crew_members#index'
   get '/crew_members/:id', to: 'crew_members#show'
 
   resources :pirate_ships do
     resources :crew_members, only: [:index]
   end
-
-
 end

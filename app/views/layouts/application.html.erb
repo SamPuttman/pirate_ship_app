@@ -11,6 +11,8 @@
   </head>
 
   <body>
+    <%= link_to 'Pirate Ships Index', pirate_ships_path, id: 'pirate-ships-index-link', class: 'nav-link' %>
+    <%= link_to 'Crew Members Index', all_crew_members_path, id: 'all-crew-index-link', class: 'nav-link' %>
     <%= yield %>
   </body>
 </html>
