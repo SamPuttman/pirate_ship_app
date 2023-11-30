@@ -13,3 +13,28 @@
  *= require_tree .
  *= require_self
  */
+
+ .crew-members-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.crew-members-table th, .crew-members-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.crew-members-table th {
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+.crew-members-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.crew-members-table tr:hover {
+  background-color: #ddd;
+}
+
