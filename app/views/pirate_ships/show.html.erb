@@ -1,10 +1,30 @@
 <h1><%= @pirate_ship.name %></h1>
-<body>
+
 <%= link_to 'View Crew Members', pirate_ship_crew_members_path(@pirate_ship) %>
-<body>
-<p><strong>Type:</strong> <%= @pirate_ship.ship_type %></p>
-<p><strong>Flag:</strong> <%= @pirate_ship.flag %></p>
-<p><strong>Maximum Crew:</strong> <%= @pirate_ship.maximum_crew %></p>
-<p><strong>Sunk:</strong> <%= @pirate_ship.sunk %></p>
-<p><strong>Created At:</strong> <%= @pirate_ship.created_at %></p>
-<p><strong>Updated At:</strong> <%= @pirate_ship.updated_at %></p>
+
+<table class="crew-members-table">
+  <thead>
+    <tr>
+      <th>Pirate Ship ID</th>
+      <th>Ship Type</th>
+      <th>Flag</th>
+      <th>Maximum Crew Size</th>
+      <th>Current Crew Member Count</th>
+      <th>Sunk?</th>
+      <th>Created at</th>
+      <th>Updated at</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= @pirate_ship.id %></td>
+      <td><%= @pirate_ship.ship_type %></td>
+      <td><%= @pirate_ship.flag %></td>
+      <td><%= @pirate_ship.maximum_crew %></td>
+      <td><%= @pirate_ship.crew_members.count %></td>
+      <td><%= @pirate_ship.sunk %></td>
+      <td><%= @pirate_ship.created_at %></td>
+      <td><%= @pirate_ship.updated_at %></td>
+    </tr>
+  </tbody>
+</table>
