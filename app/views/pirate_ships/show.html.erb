@@ -1,4 +1,7 @@
 <h1><%= @pirate_ship.name %></h1>
+<body>
+<%= link_to 'View Crew Members', pirate_ship_crew_members_path(@pirate_ship) %>
+<body>
 <p><strong>Type:</strong> <%= @pirate_ship.ship_type %></p>
 <p><strong>Flag:</strong> <%= @pirate_ship.flag %></p>
 <p><strong>Maximum Crew:</strong> <%= @pirate_ship.maximum_crew %></p>
