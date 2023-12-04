@@ -1,7 +1,11 @@
 <h1><%= @crew_member.name %></h1>
+
+<%= link_to 'Update Crew Record', edit_pirate_ship_crew_member_path(@pirate_ship, @crew_member) %>
+
 <p><strong>Name:</strong> <%= @crew_member.name %></p>
 <p><strong>Age:</strong> <%= @crew_member.age %></p>
 <p><strong>Role:</strong> <%= @crew_member.role %></p>
 <p><strong>Missing Limbs?:</strong> <%= @crew_member.missing_limbs %></p>
 <p><strong>Created At:</strong> <%= @crew_member.created_at %></p>
 <p><strong>Updated At:</strong> <%= @crew_member.updated_at %></p>
+<p><strong>Crew member of:</strong> <%= link_to @crew_member.pirate_ship.name, pirate_ship_path(@crew_member.pirate_ship) %></p>

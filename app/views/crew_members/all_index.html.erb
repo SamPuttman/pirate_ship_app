@@ -13,7 +13,7 @@
   <tbody>
     <% @crew_members.each do |crew_member| %>
       <tr>
-        <td><%= crew_member.name %></td>
+        <td><%= link_to crew_member.name, pirate_ship_crew_member_path(crew_member.pirate_ship, crew_member) %></td>
         <td><%= crew_member.age %></td>
         <td><%= crew_member.role %></td>
         <td><%= crew_member.missing_limbs %></td>

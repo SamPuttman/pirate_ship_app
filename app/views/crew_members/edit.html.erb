@@ -1,0 +1,29 @@
+<h1>Edit Crew Member</h1>
+
+<%= form_with model: @crew_member, local: true, html: { id: 'form' } do |form| %>
+ 
+  <div class="form-field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="form-field">
+    <%= form.label :age %>
+    <%= form.text_field :age %>
+  </div>
+
+  <div class="form-field">
+    <%= form.label :role %>
+    <%= form.text_field :role %>
+  </div>
+
+  <div class="form-field">
+    <%= form.label :missing_limbs %>
+    <%= form.select :missing_limbs, [[true], [false]] %>
+  </div>
+
+  <div class="form-field">
+    <%= form.submit "Update Crew Member" %>
+  </div>
+
+<% end %>

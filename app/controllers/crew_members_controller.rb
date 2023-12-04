@@ -6,6 +6,7 @@ class CrewMembersController < ApplicationController
 
   def show
     @crew_member = CrewMember.find(params[:id])
+    @pirate_ship = @crew_member.pirate_ship
   end
 
   def all_index 
@@ -30,6 +31,19 @@ class CrewMembersController < ApplicationController
   def new
     @pirate_ship = PirateShip.find(params[:pirate_ship_id])
     @crew_member = CrewMember.new
+  end
+
+  def edit
+    @crew_member = CrewMember.find(params[:id])
+  end
+
+  def update
+    @crew_member = CrewMember.find(params[:id])
+    if @crew_member.update(crew_member_params)
+      pirate_ship_crew_members_path(@pirate_ship)
+    else
+      render :edit
+    end
   end
 
   private
