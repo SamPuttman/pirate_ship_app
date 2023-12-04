@@ -18,10 +18,10 @@
   </div>
 
   <div class="form-field">
-    <%= form.label :missing_limbs %>
-    <%= form.select :missing_limbs, [['Yes', true], ['No', false]] %>
+    <%= form.label :active %>
+    <%= form.select :active, [[true], [false]] %>
   </div>
-  
+
   <div class="form-field">
     <%= form.submit "Create Crew Member" %>
   </div>

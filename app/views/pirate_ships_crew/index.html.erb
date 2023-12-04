@@ -8,7 +8,7 @@
       <th>Name</th>
       <th>Age</th>
       <th>Role</th>
-      <th>Missing Limbs?</th>
+      <th>Active?</th>
     </tr>
   </thead>
   <tbody>
@@ -17,7 +17,7 @@
         <td><%= link_to crew_member.name, pirate_ship_crew_member_path(@pirate_ship, crew_member) %></td>
         <td><%= crew_member.age %></td>
         <td><%= crew_member.role %></td>
-        <td><%= crew_member.missing_limbs %></td>
+        <td><%= crew_member.active %></td>
       </tr>
     <% end %>
   </tbody>
