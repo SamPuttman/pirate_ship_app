@@ -34,13 +34,16 @@ class CrewMembersController < ApplicationController
   end
 
   def edit
+    @pirate_ship = PirateShip.find(params[:pirate_ship_id])
     @crew_member = CrewMember.find(params[:id])
   end
 
   def update
     @crew_member = CrewMember.find(params[:id])
-    if @crew_member.update(crew_member_params)
-      pirate_ship_crew_members_path(@pirate_ship)
+    @pirate_ship = @crew_member.pirate_ship
+
+    if @crew_member.update(crew_params)
+      redirect_to pirate_ship_crew_members_path(@pirate_ship)
     else
       render :edit
     end

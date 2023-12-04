@@ -1,6 +1,6 @@
 <h1>Edit Crew Member</h1>
 
-<%= form_with model: @crew_member, local: true, html: { id: 'form' } do |form| %>
+<%= form_with model: [@pirate_ship, @crew_member], local: true, html: { id: 'form' } do |form| %>
  
   <div class="form-field">
     <%= form.label :name %>
