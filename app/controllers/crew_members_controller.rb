@@ -8,7 +8,7 @@ class CrewMembersController < ApplicationController
     @crew_member = CrewMember.find(params[:id])
   end
 
-  def all_index
+  def all_index 
     @crew_members = CrewMember.all
   end
   
