@@ -13,18 +13,28 @@ class CrewMembersController < ApplicationController
   end
 
   def create
-    @crew_member = CrewMember.new(crew_params)
-      @crew_member.save
-    redirect_to crew_member_path
+    @pirate_ship = PirateShip.find(params[:pirate_ship_id])
+    @crew_member = @pirate_ship.crew_members.new(crew_params)
+    
+    if @crew_member.save
+      redirect_to pirate_ship_crew_members_path(@pirate_ship)
+    else
+      render :new
+    end
   end
 
   def edit
     @crew_member = CrewMember.find(params[:id])
   end
 
+  def new
+    @pirate_ship = PirateShip.find(params[:pirate_ship_id])
+    @crew_member = CrewMember.new
+  end
+
   private
 
   def crew_params
-    params.require(@crew_member).permit(:pirate_ship_id, :name, :age, :role, :missing_limbs)
+    params.require(:crew_member).permit(:name, :age, :role, :missing_limbs)
   end
 end

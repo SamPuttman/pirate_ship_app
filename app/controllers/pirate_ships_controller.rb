@@ -1,6 +1,6 @@
 class PirateShipsController < ApplicationController
   def index
-    @pirate_ships = PirateShip.all
+    @pirate_ships = PirateShip.order(id: :asc)
   end
 
   def show
