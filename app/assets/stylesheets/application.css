@@ -14,8 +14,8 @@
  *= require_self
  */
 
-@import "/forms.css";
-@import "/table.css";
+@import "forms";
+@import "table";
 
 .nav-link {
   /* Your CSS styles for the links */

@@ -1,6 +1,6 @@
-<h1>New Pirate Ship</h1>
+<h1>Edit Pirate Ship</h1>
 
-<%= form_with model: @pirate_ship, local: true, data: { turbo: false }, html: { id: 'pirate-ship-form' } do |form| %>
+<%= form_with model: @pirate_ship, local: true, html: { id: 'form' } do |form| %>
   <div class="form-field">
     <%= form.label :name %>
     <%= form.text_field :name %>
@@ -27,6 +27,6 @@
   </div>
 
   <div class="form-field">
-    <%= form.submit "Create Pirate Ship" %>
+    <%= form.submit "Update"Pirate Ship" %>
   </div>
 <% end %>

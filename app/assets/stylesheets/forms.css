@@ -1,25 +1,24 @@
-#pirate-ship-form {
+#form {
   max-width: 400px; 
-  margin: 0 auto; 
+  margin: 0;
   padding: 15px; 
 }
 
-#pirate-ship-form .form-field {
+#form .form-field {
   margin-bottom: 10px; 
 }
 
-#pirate-ship-form .form-field label {
+#form .form-field label {
   display: block; 
   margin-bottom: 5px; 
 }
 
-#pirate-ship-form .form-field input[type="text"],
-#pirate-ship-form .form-field select {
+#form .form-field input[type="text"],
+#form .form-field select {
   width: 100%; 
   padding: 8px;
 }
 
-#pirate-ship-form input[type="submit"] {
-  padding: 10px 15px; 
-  cursor: pointer; 
+#form input[type="submit"] {
+  padding: 10px 15px;  
 }
