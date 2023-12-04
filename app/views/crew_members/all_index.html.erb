@@ -7,6 +7,7 @@
       <th>Age</th>
       <th>Role</th>
       <th>Missing Limbs?</th>
+      <th>Assigned Ship</th>
     </tr>
   </thead>
   <tbody>
@@ -16,6 +17,7 @@
         <td><%= crew_member.age %></td>
         <td><%= crew_member.role %></td>
         <td><%= crew_member.missing_limbs %></td>
+        <td><%= link_to crew_member.pirate_ship.name, pirate_ship_path(crew_member.pirate_ship) %></td>
       </tr>
     <% end %>
   </tbody>

@@ -19,11 +19,11 @@
     <% @pirate_ships.each do |pirate_ship| %>
       <tr>
         <td><%= pirate_ship.id %></td>
-        <td><%= pirate_ship.name %></td>
+        <td><%= link_to pirate_ship.name, pirate_ship_path(pirate_ship) %></td>
         <td><%= pirate_ship.flag %></td>
         <td><%= pirate_ship.ship_type %></td>
         <td><%= pirate_ship.maximum_crew %></td>
-        <td><%= pirate_ship.crew_members.count %></td>
+        <td><%= link_to pirate_ship.crew_members.count, pirate_ship_crew_members_path(pirate_ship) %></td>
         <td><%= pirate_ship.sunk %></td>
         <td><%= pirate_ship.created_at %></td>
         <td><%= pirate_ship.updated_at %></td>
