@@ -9,8 +9,6 @@ Rails.application.routes.draw do
     resources :crew_members
   end
 
-  resources :parents
-
   get '/crew_members/all', to: 'crew_members#all_index', as: 'all_crew_members'
 
 
@@ -22,9 +20,4 @@ Rails.application.routes.draw do
 
   #https://guides.rubyonrails.org/routing.html
 
-  resources :pirate_ships do
-    resources :crew_members
-  end
-
-  resources :parents
 end

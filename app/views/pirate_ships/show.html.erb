@@ -1,8 +1,10 @@
 <h1><%= @pirate_ship.name %></h1>
 
+<%= link_to 'Update Ship', edit_pirate_ship_path(@pirate_ship) %>
 <%= link_to 'View Crew Members', pirate_ship_crew_members_path(@pirate_ship) %>
 
-<table class="crew-members-table">
+
+<table id="table">
   <thead>
     <tr>
       <th>Pirate Ship ID</th>

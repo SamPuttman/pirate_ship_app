@@ -25,6 +25,6 @@ class CrewMembersController < ApplicationController
   private
 
   def crew_params
-    params.permit(:pirate_ship_id, :name, :age, :role, :missing_limbs)
+    params.require(@crew_member).permit(:pirate_ship_id, :name, :age, :role, :missing_limbs)
   end
 end

@@ -21,12 +21,18 @@ class PirateShipsController < ApplicationController
     @pirate_ship = PirateShip.find(params[:id])
   end
 
+  def update
+    @pirate_ship = PirateShip.find(params[:id])
+      @pirate_ship.update(pirate_ship_params)
+    redirect_to @pirate_ship
+  end
+
 ### HELPER METHODS ###
 
 private
 
   def pirate_ship_params
-    params.permit(:name, :ship_type, :flag, :maximum_crew, :sunk)
+    params.require(:pirate_ship).permit(:name, :ship_type, :flag, :maximum_crew, :sunk)
   end
 end
 
