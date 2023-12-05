@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "ParentShow", type: :feature do
+RSpec.feature "PirateShipsShow", type: :feature do
   it "visitor sees details of a specific pirate ship" do
 
     ship = PirateShip.create!(name: "The Black Pearl", ship_type: "Galleon", flag: "Jolly Roger", maximum_crew: 50, sunk: false)

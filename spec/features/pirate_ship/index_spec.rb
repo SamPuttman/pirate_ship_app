@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "ParentIndex", type: :feature do
+RSpec.feature "PirateShipsIndex", type: :feature do
   it "visitor sees names of pirate ships" do
 
     PirateShip.create!(name: "The Black Pearl", ship_type: "Galleon", flag: "Jolly Roger", maximum_crew: 50, sunk: false)

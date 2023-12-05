@@ -7,7 +7,7 @@ RSpec.feature "PirateShipsNew", type: :feature do
 
   end
 
-  it "User edits a crew member" do
+  it "User creates a new pirate ship" do
     visit "/pirate_ships/new"
 
     expect(page).to have_content("New Pirate Ship")
