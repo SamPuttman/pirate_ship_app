@@ -10,17 +10,17 @@ RSpec.feature "ChildIndex", type: :feature do
   end
 
   it "visitor sees details of all crew members" do
-    visit '/crew_members'
+    visit '/crew_members/all'
 
     expect(page).to have_content("Jack Sparrow")
     expect(page).to have_content(38)
     expect(page).to have_content("Captain")
-    expect(page).to have_content(false)
+    expect(page).to have_content(true)
 
     expect(page).to have_content("Will Turner")
     expect(page).to have_content(28)
     expect(page).to have_content("First Mate")
-    expect(page).to have_content(false)
+    expect(page).to have_content(true)
 
     expect(page).to_not have_content("Davy Jones")
     expect(page).to_not have_content("Edward Teach")

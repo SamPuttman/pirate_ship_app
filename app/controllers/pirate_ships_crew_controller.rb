@@ -27,7 +27,6 @@ class PirateShipsCrewController < ApplicationController
     @crew_member = @pirate_ship.crew_members.find(params[:id])
     if @crew_member.update(crew_params)
       redirect_to pirate_ship_crew_members_path(@pirate_ship)
-      render :edit
     end
   end
 
