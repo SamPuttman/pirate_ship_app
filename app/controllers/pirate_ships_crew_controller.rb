@@ -39,10 +39,12 @@ class PirateShipsCrewController < ApplicationController
     @crew_member = @pirate_ship.crew_members.find(params[:id])
   end
 
-  private
-
-  def set_pirate_ship
+  def destroy
     @pirate_ship = PirateShip.find(params[:pirate_ship_id])
+    @crew_member = @pirate_ship.crew_members.find(params[:id])
+    @crew_member.destroy
+
+    redirect_to pirate_ship_crew_members_path(@pirate_ship)
   end
 
   private

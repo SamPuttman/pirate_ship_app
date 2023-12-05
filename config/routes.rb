@@ -18,7 +18,7 @@ post '/pirate_ships/:pirate_ship_id/crew_members', to: 'pirate_ships_crew#create
 get '/pirate_ships/:pirate_ship_id/crew_members/:id', to: 'pirate_ships_crew#show', as: 'pirate_ship_crew_member'
 get '/pirate_ships/:pirate_ship_id/crew_members/:id/edit', to: 'pirate_ships_crew#edit', as: 'edit_pirate_ship_crew_member'
 patch '/pirate_ships/:pirate_ship_id/crew_members/:id', to: 'pirate_ships_crew#update'
-delete '/pirate_ships/:pirate_ship_id/crew_members/:id', to: 'pirate_ships_crew#destroy', as: 'delete_pirate_ships_crew_member'
+get '/pirate_ships/:pirate_ship_id/crew_members/:id/delete', to: 'pirate_ships_crew#destroy', as: 'delete_pirate_ships_crew_member'
 
 # Pirate Ships routes
 get '/pirate_ships', to: 'pirate_ships#index', as: 'pirate_ships'
