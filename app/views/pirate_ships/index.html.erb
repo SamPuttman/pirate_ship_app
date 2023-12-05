@@ -10,7 +10,7 @@
       <th>Ship Type</th>
       <th>Maximum Crew Size</th>
       <th>Current Crew Member Count</th>
-      <th>Sunk?</th>
+      <th>Afloat?</th>
       <th>Created at</th>
       <th>Updated at</th>
     </tr>
@@ -24,7 +24,7 @@
         <td><%= pirate_ship.ship_type %></td>
         <td><%= pirate_ship.maximum_crew %></td>
         <td><%= link_to pirate_ship.crew_members.count, pirate_ship_crew_members_path(pirate_ship) %></td>
-        <td><%= pirate_ship.sunk %></td>
+        <td><%= pirate_ship.afloat %></td>
         <td><%= pirate_ship.created_at %></td>
         <td><%= pirate_ship.updated_at %></td>
       </tr>

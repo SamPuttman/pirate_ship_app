@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.feature "PirateShipsShow", type: :feature do
   it "visitor sees details of a specific pirate ship" do
 
-    ship = PirateShip.create!(name: "The Black Pearl", ship_type: "Galleon", flag: "Jolly Roger", maximum_crew: 50, sunk: false)
+    ship = PirateShip.create!(name: "The Black Pearl", ship_type: "Galleon", flag: "Jolly Roger", maximum_crew: 50, afloat: true)
 
     visit "/pirate_ships/#{ship.id}"
 
@@ -12,6 +12,6 @@ RSpec.feature "PirateShipsShow", type: :feature do
     expect(page).to have_content("Jolly Roger")
     expect(page).to have_content("Jolly Roger")
     expect(page).to have_content(50)
-    expect(page).to have_content(false)
+    expect(page).to have_content(true)
   end
 end

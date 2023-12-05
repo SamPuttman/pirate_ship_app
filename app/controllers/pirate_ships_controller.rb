@@ -32,7 +32,7 @@ class PirateShipsController < ApplicationController
 private
 
   def pirate_ship_params
-    params.require(:pirate_ship).permit(:name, :ship_type, :flag, :maximum_crew, :sunk)
+    params.require(:pirate_ship).permit(:name, :ship_type, :flag, :maximum_crew, :afloat)
   end
 end
 

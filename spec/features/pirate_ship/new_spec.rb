@@ -2,8 +2,8 @@ require 'rails_helper'
 
 RSpec.feature "PirateShipsNew", type: :feature do
   before do
-    @ship = PirateShip.create!(name: "The Black Pearl", ship_type: "Galleon", flag: "Jolly Roger", maximum_crew: 50, sunk: false)
-    @ship_2 = PirateShip.create!(name: "The Cutlass", ship_type: "Galleon", flag: "Jolly Roger", maximum_crew: 50, sunk: false)
+    @ship = PirateShip.create!(name: "The Black Pearl", ship_type: "Galleon", flag: "Jolly Roger", maximum_crew: 50, afloat: true)
+    @ship_2 = PirateShip.create!(name: "The Cutlass", ship_type: "Galleon", flag: "Jolly Roger", maximum_crew: 50, afloat: true)
 
   end
 
@@ -16,7 +16,7 @@ RSpec.feature "PirateShipsNew", type: :feature do
     fill_in "Ship type", with: "Galleon"
     fill_in "Flag", with: "Jolly Roger"
     fill_in "Maximum crew", with: "300"
-    select "false", from: "Sunk"
+    select "false", from: "Afloat"
 
     click_button "Create Pirate Ship"
 

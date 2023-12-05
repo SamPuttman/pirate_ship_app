@@ -30,7 +30,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_29_211553) do
     t.string "ship_type"
     t.string "flag"
     t.integer "maximum_crew"
-    t.boolean "sunk"
+    t.boolean "afloat"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
