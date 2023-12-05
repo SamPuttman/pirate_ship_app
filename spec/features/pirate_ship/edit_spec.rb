@@ -17,7 +17,5 @@ RSpec.feature "PirateShipsEdit", type: :feature do
     visit "/pirate_ships"
 
     expect(page).to have_content("Queen Anne's Revenge")
-
-
   end
 end
