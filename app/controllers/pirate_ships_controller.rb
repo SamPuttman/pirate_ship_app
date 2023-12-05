@@ -27,6 +27,12 @@ class PirateShipsController < ApplicationController
     redirect_to @pirate_ship
   end
 
+  def destroy
+    @pirate_ship = PirateShip.find(params[:id])
+      @pirate_ship.destroy
+    redirect_to pirate_ships_path
+  end
+
 ### HELPER METHODS ###
 
 private

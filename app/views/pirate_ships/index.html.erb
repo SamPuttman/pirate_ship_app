@@ -4,7 +4,6 @@
 <table id="table">
   <thead>
     <tr>
-      <th>Edit Ship</th>
       <th>Pirate Ship ID</th>
       <th>Ship Name</th>
       <th>Flag</th>
@@ -14,12 +13,13 @@
       <th>Afloat?</th>
       <th>Created at</th>
       <th>Updated at</th>
+      <th>Edit Ship</th>
+      <th>Delete Ship</th>
     </tr>
   </thead>
   <tbody>
     <% @pirate_ships.each do |pirate_ship| %>
       <tr>
-        <td><%= link_to 'Edit', edit_pirate_ship_path(pirate_ship) %>
         <td><%= pirate_ship.id %></td>
         <td><%= link_to pirate_ship.name, pirate_ship_path(pirate_ship) %></td>
         <td><%= pirate_ship.flag %></td>
@@ -29,6 +29,9 @@
         <td><%= pirate_ship.afloat %></td>
         <td><%= pirate_ship.created_at %></td>
         <td><%= pirate_ship.updated_at %></td>
+        <td><%= link_to 'Edit Ship', edit_pirate_ship_path(pirate_ship) %>
+        <%# there has to be a better way of doing the below - this is what I landed on.%>
+        <td><%= link_to 'Destroy ship', delete_pirate_ship_path(pirate_ship) %></td>
       </tr>
     <% end %>
   </tbody>
