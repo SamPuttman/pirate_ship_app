@@ -19,7 +19,7 @@ RSpec.feature "PirateShipsCrewNew", type: :feature do
     fill_in "Name", with: "Hector Barbossa"
     fill_in "Age", with: "54"
     fill_in "Role", with: "First Mate"
-    select "false", from: "Active"
+    select "true", from: "Active"
 
     click_button "Create Crew Member"
 

@@ -3,7 +3,12 @@ class PirateShipsCrewController < ApplicationController
 
   def index
     @pirate_ship = PirateShip.find(params[:pirate_ship_id])
-    @crew_members = @pirate_ship.crew_members
+
+    if params[:sort] == 'name'
+      @crew_members = @pirate_ship.crew_members.where(active: true).order(:name)
+    else
+      @crew_members = @pirate_ship.crew_members.where(active: true)
+    end
   end
 
   def new

@@ -1,6 +1,8 @@
 <h1><%= @pirate_ship.name %> Crew Members</h1>
 
 <%= link_to 'New Crew Member', new_pirate_ship_crew_member_path(@pirate_ship), style: 'display: block; margin-bottom: 20px;' %>
+<%= link_to 'Sort by Name', pirate_ship_crew_members_path(@pirate_ship, sort: 'name') %>
+
 
 <table id="table">
   <thead>

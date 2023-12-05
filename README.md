@@ -150,7 +150,7 @@ and I am redirected to the Child Show page where I see the Child's updated infor
 
 ActiveRecord
 
-[ ] done
+[x] done
 
 User Story 15, Child Index only shows `true` Records 
 
@@ -158,7 +158,7 @@ As a visitor
 When I visit the child index
 Then I only see records where the boolean column is `true`
 
-[ ] done
+[x] done
 
 User Story 16, Sort Parent's Children in Alphabetical Order by name 
 
@@ -167,6 +167,7 @@ When I visit the Parent's children Index Page
 Then I see a link to sort children in alphabetical order
 When I click on the link
 I'm taken back to the Parent's children Index Page where I see all of the parent's children in alphabetical order
+
 Usability
 [ ] done
 
