@@ -7,6 +7,7 @@
 <table id="table">
   <thead>
     <tr>
+      <th>Edit Crew</th>
       <th>Name</th>
       <th>Age</th>
       <th>Role</th>
@@ -16,6 +17,7 @@
   <tbody>
     <% @crew_members.each do |crew_member| %>
       <tr>
+        <td><%= link_to 'Edit', edit_pirate_ship_crew_member_path(@pirate_ship, crew_member) %></td>
         <td><%= link_to crew_member.name, pirate_ship_crew_member_path(@pirate_ship, crew_member) %></td>
         <td><%= crew_member.age %></td>
         <td><%= crew_member.role %></td>
