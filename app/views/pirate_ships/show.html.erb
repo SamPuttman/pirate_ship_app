@@ -1,8 +1,5 @@
 <h1><%= @pirate_ship.name %></h1>
 
-<%= link_to 'Update Ship', edit_pirate_ship_path(@pirate_ship) %>
-<%= link_to 'View Crew Members', pirate_ship_crew_members_path(@pirate_ship) %>
-
 
 <table id="table">
   <thead>
@@ -15,6 +12,9 @@
       <th>Afloat?</th>
       <th>Created at</th>
       <th>Updated at</th>
+      <th>Update Ship</th>
+      <th>View Crew Members</th>
+      <th>Destroy Ship</th>
     </tr>
   </thead>
   <tbody>
@@ -27,6 +27,9 @@
       <td><%= @pirate_ship.afloat %></td>
       <td><%= @pirate_ship.created_at %></td>
       <td><%= @pirate_ship.updated_at %></td>
+      <td><%= link_to 'Refit Ship', edit_pirate_ship_path(@pirate_ship) %> </td>
+      <td><%= link_to 'Look at the roster', pirate_ship_crew_members_path(@pirate_ship) %> </td>
+      <td><%= link_to 'Order to Scuttle', delete_pirate_ship_path(@pirate_ship) %> </td>
     </tr>
   </tbody>
 </table>

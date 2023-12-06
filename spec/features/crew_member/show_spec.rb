@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe "PirateShipsCrewShow", type: :feature do
+RSpec.describe "CrewMemberShow", type: :feature do
   
   before do
     @ship = PirateShip.create!(name: "The Black Pearl", ship_type: "Galleon", flag: "Jolly Roger", maximum_crew: 50, afloat: true)

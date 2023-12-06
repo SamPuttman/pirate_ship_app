@@ -16,9 +16,9 @@
 
 @import "forms";
 @import "table";
+@import "button";
 
 .nav-link {
-  /* Your CSS styles for the links */
   margin-right: 10px;
 }
 

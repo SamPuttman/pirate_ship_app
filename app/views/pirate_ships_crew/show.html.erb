@@ -1,6 +1,8 @@
 <h1><%= @crew_member.name %></h1>
 
-<%= link_to 'Update Crew Record', edit_pirate_ship_crew_member_path(@pirate_ship, @crew_member) %>
+<%= link_to 'Haircut / Surgery', edit_pirate_ship_crew_member_path(@pirate_ship, @crew_member), id: 'button' %>
+<%= link_to 'Walk the plank', delete_pirate_ships_crew_member_path(@pirate_ship, @crew_member), id: 'button' %>
+
 
 <p><strong>Name:</strong> <%= @crew_member.name %></p>
 <p><strong>Age:</strong> <%= @crew_member.age %></p>

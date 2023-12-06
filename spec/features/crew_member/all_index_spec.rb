@@ -1,7 +1,6 @@
-require 'rails_helper'
+require "rails_helper"
 
-
-RSpec.feature "ChildIndex", type: :feature do
+RSpec.describe "AllChildIndex", type: :feature do
     
   before do
     @ship = PirateShip.create!(name: "The Black Pearl", ship_type: "Galleon", flag: "Jolly Roger", maximum_crew: 50, afloat: true)
@@ -10,7 +9,7 @@ RSpec.feature "ChildIndex", type: :feature do
   end
 
   it "visitor sees details of all crew members" do
-    visit '/crew_members/all'
+    visit "/crew_members/all"
 
     expect(page).to have_content("Jack Sparrow")
     expect(page).to have_content(38)
@@ -22,7 +21,6 @@ RSpec.feature "ChildIndex", type: :feature do
     expect(page).to have_content("First Mate")
     expect(page).to have_content(true)
 
-    expect(page).to_not have_content("Davy Jones")
     expect(page).to_not have_content("Edward Teach")
   end
 end

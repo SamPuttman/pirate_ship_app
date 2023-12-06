@@ -17,11 +17,8 @@ class PirateShipsCrewController < ApplicationController
 
   def create
     @crew_member = @pirate_ship.crew_members.new(crew_params)
-    if @crew_member.save
-      redirect_to pirate_ship_crew_members_path(@pirate_ship)
-    else
-      render :new
-    end
+    @crew_member.save
+    redirect_to pirate_ship_crew_members_path(@pirate_ship)
   end
 
   def edit

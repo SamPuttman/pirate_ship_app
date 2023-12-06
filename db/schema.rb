@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_11_29_211553) do
+ActiveRecord::Schema[7.0].define(version: 2023_12_06_010137) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -19,9 +19,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_29_211553) do
     t.string "name"
     t.integer "age"
     t.string "role"
-    t.boolean "active"
+    t.boolean "missing_limbs"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "active"
     t.index ["pirate_ship_id"], name: "index_crew_members_on_pirate_ship_id"
   end
 
@@ -30,9 +31,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_29_211553) do
     t.string "ship_type"
     t.string "flag"
     t.integer "maximum_crew"
-    t.boolean "afloat"
+    t.boolean "sunk"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "afloat"
   end
 
   add_foreign_key "crew_members", "pirate_ships"

@@ -1,6 +1,6 @@
 [x] done
 
-User Story 1, Parent Index 
+User Story 1, Pirate Ship Index 
 
 For each parent table
 As a visitor
@@ -9,7 +9,7 @@ Then I see the name of each pirate_ship record in the system
 
 [x] done
 
-User Story 2, Parent Show 
+User Story 2, Pirate Ship Show 
 
 As a visitor
 When I visit '/pirate_ships/:id'
@@ -18,7 +18,7 @@ Then I see the pirate_ship with that id including the parent's attributes
 
 [x] done
 
-User Story 3, Child Index 
+User Story 3, Crew Member Index 
 
 As a visitor
 When I visit '/crew_members'
@@ -27,7 +27,7 @@ Then I see each Child in the system including the Child's attributes
 
 [x] done
 
-User Story 4, Child Show 
+User Story 4, Crew Member Show 
 
 As a visitor
 When I visit '/crew_members/:id'
@@ -36,7 +36,7 @@ Then I see the child with that id including the child's attributes
 
 [x] done
 
-User Story 5, Parent Children Index 
+User Story 5, Pirate Ship Crew Member Index 
 
 As a visitor
 When I visit '/pirate_ships/1/crew_members'
@@ -46,7 +46,7 @@ ActiveRecord
 
 [x] done
 
-User Story 6, Parent Index sorted by Most Recently Created 
+User Story 6, Pirate Ship Index sorted by Most Recently Created 
 
 As a visitor
 When I visit the parent index,
@@ -55,16 +55,17 @@ And next to each of the records I see when it was created
 
 [x] done
 
-User Story 7, Parent Child Count
+User Story 7, Pirate Ship Crew Member Count
 
 As a visitor
 When I visit a parent's show page
 I see a count of the number of children associated with this parent
+
 Usability
 
 [x] done
 
-User Story 8, Child Index Link
+User Story 8, Crew Member Index Link
 
 As a visitor
 When I visit any page on the site
@@ -91,7 +92,7 @@ CRUD
 
 [x] done
 
-User Story 11, Parent Creation 
+User Story 11, Pirate Ship Creation 
 
 As a visitor
 When I visit the Parent Index page
@@ -191,7 +192,7 @@ I should be taken to that `child_table_name` edit page where I can update its in
 
 Iteration 3
 CRUD
-[ ] done
+[x] done
 
 User Story 19, Parent Delete 
 
@@ -202,7 +203,8 @@ When I click the link "Delete Parent"
 Then a 'DELETE' request is sent to '/parents/:id',
 the parent is deleted, and all child records are deleted
 and I am redirected to the parent index page where I no longer see this parent
-[ ] done
+
+[x] done
 
 User Story 20, Child Delete 
 
@@ -213,6 +215,7 @@ When I click the link
 Then a 'DELETE' request is sent to '/child_table_name/:id',
 the child is deleted,
 and I am redirected to the child index page where I no longer see this child
+
 ActiveRecord
 [ ] done
 
@@ -223,8 +226,10 @@ When I visit the Parent's children Index Page
 I see a form that allows me to input a number value
 When I input a number value and click the submit button that reads 'Only return records with more than `number` of `column_name`'
 Then I am brought back to the current index page with only the records that meet that threshold shown.
+
 Usability
-[ ] done
+
+[x] done
 
 User Story 22, Parent Delete From Parent Index Page 
 
@@ -233,7 +238,8 @@ When I visit the parent index page
 Next to every parent, I see a link to delete that parent
 When I click the link
 I am returned to the Parent Index Page where I no longer see that parent
-[ ] done
+
+[x] done
 
 User Story 23, Child Delete From Childs Index Page 
 
@@ -242,6 +248,7 @@ When I visit the `child_table_name` index page or a parent `child_table_name` in
 Next to every child, I see a link to delete that child
 When I click the link
 I should be taken to the `child_table_name` index page where I no longer see that child
+
 Extensions
 [ ] done
 
@@ -272,3 +279,10 @@ When I type in a keyword that is an partial match of one or more of my records a
 Then I only see records that are an partial match returned on the page
 
 This functionality should be separate from your exact match functionality.
+
+
+
+
+I changed the schema slighly after working on the project a bit - missing_limbs?'' became 'active' and 'sunk' became 'afloat'. Made more sense in the context of some of the later user stories. 
+
+Link to schema: https://dbdesigner.page.link/ojFHLNQCTvbE8PMM8

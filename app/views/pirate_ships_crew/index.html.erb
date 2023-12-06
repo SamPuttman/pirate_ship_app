@@ -1,7 +1,7 @@
 <h1><%= @pirate_ship.name %> Crew Members</h1>
 
-<%= link_to 'New Crew Member', new_pirate_ship_crew_member_path(@pirate_ship), style: 'display: block; margin-bottom: 20px;' %>
-<%= link_to 'Sort by Name', pirate_ship_crew_members_path(@pirate_ship, sort: 'name') %>
+<%= link_to 'Hire a new crewmember.', new_pirate_ship_crew_member_path(@pirate_ship), style: 'nav-link' %>
+<%= link_to 'Sort by Name', pirate_ship_crew_members_path(@pirate_ship, sort: 'name'), style: 'nav-link'  %>
 
 
 <table id="table">
@@ -22,7 +22,7 @@
         <td><%= crew_member.age %></td>
         <td><%= crew_member.role %></td>
         <td><%= crew_member.active %></td>
-        <td><%= link_to 'Edit', edit_pirate_ship_crew_member_path(@pirate_ship, crew_member) %></td>
+        <td><%= link_to 'Send to Dr. Barber', edit_pirate_ship_crew_member_path(@pirate_ship, crew_member) %></td>
         <td><%= link_to 'Walk the plank', delete_pirate_ships_crew_member_path(crew_member.pirate_ship, crew_member) %></td>
       </tr>
     <% end %>
